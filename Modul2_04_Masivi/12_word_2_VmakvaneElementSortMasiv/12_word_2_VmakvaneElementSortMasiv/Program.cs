@@ -14,7 +14,7 @@ namespace _12_word_2_VmakvaneElementSortMasiv
             Array.Sort(nums);
             Console.WriteLine(string.Join(" ",nums));
 
-            Console.WriteLine("number=");
+            Console.Write("Изберете числото, което искате да вмъкнете в сортираният масив: ");
             int number = int.Parse(Console.ReadLine());
             Console.WriteLine($"number={number}");
             int[] nums1 = new int[nums.Length+1];
@@ -33,10 +33,11 @@ namespace _12_word_2_VmakvaneElementSortMasiv
                 {
                     nums1[i + 1] = nums[i];
                 }
-                Console.WriteLine($"number={number}");
+                //Console.WriteLine($"number={number}");
             }
 
             Console.WriteLine(string.Join(" ",nums1));
+            Console.ReadKey();
 
         }
     }
