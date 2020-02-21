@@ -10,33 +10,55 @@ namespace _12_word_2_VmakvaneElementSortMasiv
     {
         static void Main(string[] args)
         {
-            int[] nums = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-            Array.Sort(nums);
-            Console.WriteLine(string.Join(" ",nums));
+
+            int[] sortedArr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+           // Array.Sort(sortedArr);
+            Console.WriteLine(string.Join(" ", sortedArr));
 
             Console.Write("Изберете числото, което искате да вмъкнете в сортираният масив: ");
             int number = int.Parse(Console.ReadLine());
             Console.WriteLine($"number={number}");
-            int[] nums1 = new int[nums.Length+1];
+            int[] newArr = new int[sortedArr.Length + 1];
 
-            for (int i = 0; i < nums.Length; i++)
+            if (number <= sortedArr[0])
             {
-                if (nums[i]<number)
+                newArr[0] = number;
+                for (int i = 1; i < newArr.Length; i++)
                 {
-                    nums1[i] = nums[i];
+                    newArr[i] = sortedArr[i - 1];
                 }
-                else if (number>nums[i] && number<nums[i+1])
+            }
+            else if (number >= sortedArr[sortedArr.Length - 1])
+            {
+                newArr[newArr.Length - 1] = number;
+                for (int i = 0; i < newArr.Length - 1; i++)
                 {
-                    nums1[i] = number;
+                    newArr[i] = sortedArr[i];
                 }
-                else
+            }
+            else
+            {
+                int j = 0;
+                for (int i = 0; i < newArr.Length; i++)
                 {
-                    nums1[i + 1] = nums[i];
+                    if (number >= sortedArr[i])
+                    {
+                        newArr[i] = sortedArr[j];
+                        j++;
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
-                //Console.WriteLine($"number={number}");
+                newArr[j] = number;
+                for (int i = j + 1; i < newArr.Length; i++)
+                {
+                    newArr[i] = sortedArr[i - 1];
+                }
             }
 
-            Console.WriteLine(string.Join(" ",nums1));
+            Console.WriteLine(string.Join(" ", newArr));
             Console.ReadKey();
 
         }
