@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VhodPechatMasiv", "VhodPechatMasiv\VhodPechatMasiv.csproj", "{A7C4ADF1-0372-4CF8-995C-532223A9AAC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7C4ADF1-0372-4CF8-995C-532223A9AAC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7C4ADF1-0372-4CF8-995C-532223A9AAC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7C4ADF1-0372-4CF8-995C-532223A9AAC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7C4ADF1-0372-4CF8-995C-532223A9AAC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {037CFBA9-3F06-4313-856B-446F3C6F1CC7}
+	EndGlobalSection
+EndGlobal

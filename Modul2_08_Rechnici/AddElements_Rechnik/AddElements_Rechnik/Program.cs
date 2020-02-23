@@ -12,6 +12,7 @@ namespace AddElements_Rechnik
         {
             var person = new Dictionary<string, int>();
             var person1 = new Dictionary<string, int>();
+
             Console.Write("Broy na elementite: ");
             int br = int.Parse(Console.ReadLine());
             int j = 0;

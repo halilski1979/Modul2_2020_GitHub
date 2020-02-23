@@ -17,6 +17,8 @@ namespace AddElements_While
                 Console.Write("Izkopaemo:");
                 string izkopaemo = Console.ReadLine();
                 if (izkopaemo == "stop") break;
+
+                Console.Write("StoynostIzkopaemo: ");
                 int values = int.Parse(Console.ReadLine());
                 goldMiners.Add(izkopaemo,values);
             }
