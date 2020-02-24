@@ -72,13 +72,7 @@ namespace VhodPechatMasiv
                 Console.WriteLine($"{item.Key} ====> {item.Value}");
             }
 
-            //Сортиране по стойност
-            Console.WriteLine();
-            Console.WriteLine("//Сортиране по стойност");
-            foreach (var item in person.OrderBy(x => x.Value))
-            {
-                Console.WriteLine($"{item.Key} ====> {item.Value}");
-            }
+            
 
             //Изтриване на елемент от речник по ключ
             Console.WriteLine();
@@ -95,7 +89,11 @@ namespace VhodPechatMasiv
             int brEl_Rechnik = person.Count;
             Console.WriteLine($"Брой:[{brEl_Rechnik}]");
 
-
+            //Сортиране по стойност
+            Console.WriteLine();
+            Console.WriteLine("//Сортиране по стойност");
+            person.OrderBy(x=>x.Value);
+            Console.WriteLine(string.Join(" ",person));
         }
     }
 }
