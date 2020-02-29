@@ -10,26 +10,40 @@ namespace Demo1
     {
         static void Main(string[] args)
         {
-            Dictionary<string, string> person = new Dictionary<string, string>();
-            var person1 = new Dictionary<string, int>();
-
-            person.Add("name1","one");
-            person.Add("name2","two");
-            person.Add("name3","three");
-
-            person1.Add("Ime1",1);
-            person1.Add("Ime2",2);
-            person1.Add("Ime3",3);
-
-            foreach (var item in person)
+            Dictionary<string, int> person = new Dictionary<string, int>
             {
-                Console.WriteLine($"{item.Key} =>{item.Value}");
-            }
-
-            foreach (var item in person1)
+                { "Halil",11} ,
+                { "Asen",222} ,
+                { "Petar",444} ,
+                { "Ivan",333} ,
+                { "Petq",222} ,
+                { "Stefan",222} ,
+            };
+            foreach (var item in person)
             {
                 Console.WriteLine($"{item.Key} => {item.Value}");
             }
+            Console.WriteLine("=======Сортиран речник по ключ==============");
+
+            //Първи начин за сортиране по ключ
+            var result = person.OrderBy(x => x.Key).ThenBy(x => x.Value);
+            foreach (var item in result)
+            {
+                Console.WriteLine($"{item.Key} => {item.Value}");
+            }
+            //Втори начин за сортиране по ключ
+            //person = person.OrderBy(x => x.Key).ThenBy(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+
+            Console.WriteLine("=======Сортиран речник по ключ в низходящ ред==============");
+            result = result.OrderByDescending(x=>x.Key);
+            foreach (var item in result)
+            {
+                Console.WriteLine($"{item.Key} => {item.Value}");
+            }
+
+
+
+
 
 
         }
