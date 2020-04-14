@@ -18,9 +18,9 @@ namespace REchnik_Universal
             while (true)
             {
                 //Console.WriteLine("Vavedete na edin red: [команда] [Име на град] [Население]");
-                //Console.WriteLine("Koманди: 1=>Спира входа на елементи");
-                //Console.WriteLine("Koманди: 2=>Добавя град и население");
-                //Console.WriteLine("Koманди: 3=>Отпечатва всички градове и населението");
+                //Console.WriteLine("Koманди: stop=>Спира входа на елементи");
+                //Console.WriteLine("Koманди: add=>Добавя град и население");
+                //Console.WriteLine("Koманди: print=>Отпечатва всички градове и населението");
                 var linia = Console.ReadLine().Split(' ').ToList();
                 string command = linia[0];
                 
